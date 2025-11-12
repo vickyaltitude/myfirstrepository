@@ -90,50 +90,74 @@ element -- <div></div> -->
     </table>
     <h2>Form</h2>
     <form action="/register" method="get">
-      <p>
-        <label for="username">Username:</label>
-        <input
-          id="username"
-          name="username"
-          type="text"
-          placeholder="Enter your name"
-          required
-        />
-      </p>
-      <p>
-        <label for="email">Email:</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="Enter your email"
-          required
-        />
-      </p>
+      <fieldset>
+        <legend>Please enter your details</legend>
+        <p>
+          <label for="username">Username:</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Enter your name"
+            required
+          />
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+        </p>
+        <section></section>
+        <article></article>
+        <p>
+          <label for="password">password:</label>
+          <input
+            id="password"
+            name="nothing"
+            type="password"
+            placeholder="Enter strong password"
+            required
+            maxlength="18"
+            minlength="6"
+          />
+        </p>
+        <p>Please Enter minimum of 6 characters and maximum of 18 characters</p>
+        <p>
+          <label>Select your gender:</label>
+          <input id="male" type="radio" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input id="female" type="radio" name="gender" value="female" />
+          <label for="female">Female</label>
+        </p>
+        <p>
+          <label for="skills">Select your skills: </label>
+          <select id="skills" name="userskills">
+            <option value="html">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="Javascript">javascript</option>
+            <option value="React">React</option>
+          </select>
+        </p>
+        <input type="range" name="volume" min="0" max="100" />
+        <input type="checkbox" name="interest" value="coding" /> Coding
+        <input type="checkbox" name="interest" value="reading" /> Reading
+      </fieldset>
 
-      <p>
-        <label for="password">password:</label>
-        <input
-          id="password"
-          name="nothing"
-          type="password"
-          placeholder="Enter strong password"
-          required
-          maxlength="18"
-          minlength="6"
-        />
-      </p>
-      <p>Please Enter minimum of 6 characters and maximum of 18 characters</p>
       <button type="submit">Submit</button>
     </form>
     <br /><br />
-    <label>Upload your resume: </label>
+    <!-- <label>Upload your resume: </label>
     <input type="file" />
     <audio controls>
       <source src="Oorum Blood.mp3" type="audio/mpeg" />
     </audio>
     <video src="130787-748398315.mp4" width="500" height="500" controls>
       Your browser does not support the video tag.
-    </video>
+    </video> -->
   </body>
 </html>
