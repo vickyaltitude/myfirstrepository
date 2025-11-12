@@ -92,18 +92,48 @@ element -- <div></div> -->
     <form action="/register" method="get">
       <p>
         <label for="username">Username:</label>
-        <input id="username" name="username" type="text" />
+        <input
+          id="username"
+          name="username"
+          type="text"
+          placeholder="Enter your name"
+          required
+        />
       </p>
       <p>
         <label for="email">Email:</label>
-        <input id="email" name="email" type="email" />
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email"
+          required
+        />
       </p>
 
       <p>
         <label for="password">password:</label>
-        <input id="password" name="nothing" type="password" />
+        <input
+          id="password"
+          name="nothing"
+          type="password"
+          placeholder="Enter strong password"
+          required
+          maxlength="18"
+          minlength="6"
+        />
       </p>
+      <p>Please Enter minimum of 6 characters and maximum of 18 characters</p>
       <button type="submit">Submit</button>
     </form>
+    <br /><br />
+    <label>Upload your resume: </label>
+    <input type="file" />
+    <audio controls>
+      <source src="Oorum Blood.mp3" type="audio/mpeg" />
+    </audio>
+    <video src="130787-748398315.mp4" width="500" height="500" controls>
+      Your browser does not support the video tag.
+    </video>
   </body>
 </html>
