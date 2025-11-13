@@ -1,3 +1,16 @@
-p {
-  color: yellow;
+/* * {
+  margin: 0;
+  padding: 0;
+}
+ */
+body {
+  background: black;
+  color: white;
+}
+
+.selectors li {
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 2px;
 }
