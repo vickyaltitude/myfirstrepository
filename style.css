@@ -3,6 +3,9 @@
   padding: 0;
 }
  */
+
+/* HSL,HSLA,RGB,RGBA,hexadecimal **/
+
 body {
   background-image: url(download.jpeg);
   background-size: cover;
@@ -40,4 +43,14 @@ a:hover {
 
 ul li {
   list-style-type: upper-roman;
+}
+
+/* !important keyword not suggestable */
+
+#idselector {
+  color: pink !important;
+}
+
+.classselector {
+  color: brown;
 }
