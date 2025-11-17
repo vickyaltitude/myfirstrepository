@@ -51,6 +51,12 @@
   left: 50px;
 }
 
+.parent-sticky {
+  height: 400px;
+  width: 600px;
+  border: 2px solid black;
+}
+
 .sticky {
   text-align: center;
   position: sticky;
@@ -69,4 +75,12 @@
 
 nav a:hover {
   color: rgb(123, 105, 3);
+}
+
+nav a:active {
+  color: red;
+}
+
+ul li::before {
+  content: "This is  ";
 }
