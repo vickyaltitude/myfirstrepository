@@ -1,0 +1,72 @@
+.static {
+  position: static;
+  border: 2px solid green;
+  height: 250px;
+  width: 250px;
+  top: 50px;
+  left: 50px;
+}
+
+.outer-relative {
+  border: 5px solid blue;
+  height: 400px;
+  width: 400px;
+}
+
+.inner-relative {
+  border: 2px solid black;
+  height: 160px;
+  width: 160px;
+  background: lightgreen;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.parent-absolute {
+  margin: 30px;
+  border: 5px solid blue;
+  height: 400px;
+  width: 400px;
+  position: relative;
+}
+
+.child-absolute {
+  border: 2px solid black;
+  height: 160px;
+  width: 160px;
+  background: lightpink;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.fixed {
+  border: 2px solid black;
+  height: 160px;
+  width: 160px;
+  background: lightpink;
+  position: fixed;
+  top: 5px;
+  left: 50px;
+}
+
+.sticky {
+  text-align: center;
+  position: sticky;
+  top: 0px;
+}
+
+.sticky nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 15px;
+  color: gold;
+  height: 100px;
+  width: 500px;
+  background: lightcoral;
+}
+
+nav a:hover {
+  color: rgb(123, 105, 3);
+}

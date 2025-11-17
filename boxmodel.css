@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 150vh;
+  width: 100vw;
+}
+
+.box_model {
+  border: 5px dotted red;
+  height: 450px;
+  width: 450px;
+}
