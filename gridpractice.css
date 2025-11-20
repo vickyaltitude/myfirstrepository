@@ -13,7 +13,7 @@ body {
 .container {
   border: 2px solid purple;
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 200px 1fr;
   grid-template-rows: 80px 1fr 200px 60px;
   gap: 10px;
 }
@@ -31,6 +31,5 @@ body {
 }
 
 .article {
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-row: 2 / 4;
 }
