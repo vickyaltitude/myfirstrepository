@@ -28,3 +28,8 @@ body {
   display: grid;
   place-content: center;
 }
+
+.box:nth-child(2) {
+  display: grid;
+  place-content: center;
+}
