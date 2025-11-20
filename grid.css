@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: lightcyan;
+  color: black;
+}
+
+.grid-container {
+  border: 4px solid lightcoral;
+  height: 80vh;
+  width: 95vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.box {
+  background: lightgreen;
+}
+
+.box:nth-child(2) {
+  display: grid;
+  place-content: center;
+}
