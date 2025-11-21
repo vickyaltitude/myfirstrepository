@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.block {
+  display: block;
+  background: lightblue;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.inline {
+  display: inline;
+  background: green;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.inline-block {
+  display: inline-block;
+  background: pink;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.disnone {
+  display: none;
+  background: gray;
+  width: 100px;
+  height: 100px;
+}
+.vishidden {
+  visibility: hidden;
+  background: violet;
+  width: 100px;
+  height: 100px;
+}
