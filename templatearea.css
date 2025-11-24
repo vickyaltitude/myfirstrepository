@@ -29,10 +29,26 @@ body {
 @media (max-width: 750px) {
   .parent {
     display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
     gap: 1em;
     grid-template-areas:
       "box-1 box-1 box-2"
       "box-1 box-1 box-3"
-      "box-1 box-5 box-5";
+      "box-4 box-5 box-5";
+  }
+}
+
+@media (max-width: 550px) {
+  .parent {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    gap: 1em;
+    grid-template-areas:
+      "box-1 box-2"
+      "box-1 box-2"
+      "box-4 box-3"
+      "box-4 box-5";
   }
 }
