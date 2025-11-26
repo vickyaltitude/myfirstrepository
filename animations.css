@@ -48,3 +48,39 @@ body {
   transition-timing-function: linear; */
   transition: all 5s linear 0.5s;
 }
+
+#animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  width: 180px;
+  background: blue;
+  /*   animation-name: jump;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-direction: normal; */
+  animation: 1s ease-in 1s 1 normal forwards jump;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateX(0);
+  }
+
+  30% {
+    transform: translateX(280px) rotateX(180deg);
+  }
+
+  60% {
+    transform: translateY(-280px) rotateY(180deg);
+  }
+
+  100% {
+    background: brown;
+    color: white;
+  }
+}
