@@ -72,8 +72,8 @@ a {
   align-items: center;
   text-align: center;
   padding-top: 4rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.45)),
-    url("https://via.placeholder.com/400") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.892), rgba(0, 0, 0, 0.45)),
+    url("./4527841.jpg") center/cover no-repeat;
 }
 
 .hero-title {
