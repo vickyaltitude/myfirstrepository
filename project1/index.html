@@ -8,10 +8,10 @@
   </head>
   <body>
     <!-- Navigation -->
-    <header>
-      <nav>
-        <h2>My Business</h2>
-        <ul>
+    <header class="header">
+      <nav class="nav container">
+        <h2 class="logo">My Business</h2>
+        <ul class="navigations">
           <li><a href="#home">Home</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
@@ -20,52 +20,66 @@
       </nav>
     </header>
     <!--  Hero section -->
-    <section>
-      <div>
-        <h1>Get your work done with us</h1>
-        <p>We do end to end business solution for your client</p>
-        <a href="#portfolio">Explore our works</a>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Get your work done with us</h1>
+        <p class="hero-text">
+          We do end to end business solution for your client
+        </p>
+        <a class="btn" href="#portfolio">Explore our works</a>
       </div>
     </section>
     <!--  Portfolio -->
-    <section>
-      <h2>Our works</h2>
-      <div>
-        <div>
-          <img src="https://via.placeholder.com/400" alt="" />
+    <section id="portfolio" class="portfolio">
+      <h2 class="section-title">Our works</h2>
+      <div class="grid">
+        <div class="card">
+          <img
+            src="https://testingbot.com/free-online-tools/random-avatar/300"
+            alt=""
+          />
           <p>Mobile App</p>
         </div>
-        <div>
-          <img src="https://via.placeholder.com/400" alt="" />
+        <div class="card">
+          <img
+            src="https://testingbot.com/free-online-tools/random-avatar/300"
+            alt=""
+          />
           <p>Ecommerce website</p>
         </div>
-        <div>
-          <img src="https://via.placeholder.com/400" alt="" />
+        <div class="card">
+          <img
+            src="https://testingbot.com/free-online-tools/random-avatar/300"
+            alt=""
+          />
           <p>Branding Logo</p>
         </div>
-        <div>
-          <img src="https://via.placeholder.com/400" alt="" />
+        <div class="card">
+          <img
+            src="https://testingbot.com/free-online-tools/random-avatar/300"
+            alt=""
+          />
           <p>Landing Page</p>
         </div>
       </div>
     </section>
 
     <!-- Team -->
-    <section>
-      <h2>Meet our team</h2>
-      <div>
-        <div>
-          <img src="https://via.placeholder.com/400" alt="" />
+    <section id="team" class="team">
+      <h2 class="section-title">Meet our team</h2>
+      <div class="container team-members">
+        <div class="person">
+          <img src="https://avatar.iran.liara.run/public/8" alt="" />
           <h3>Vinoth</h3>
           <p>Full stack developer</p>
         </div>
-        <div>
-          <img src="https://via.placeholder.com/400" alt="" />
+        <div class="person">
+          <img src="https://avatar.iran.liara.run/public/36" alt="" />
           <h3>Vignesh</h3>
           <p>CEO</p>
         </div>
-        <div>
-          <img src="https://via.placeholder.com/400" alt="" />
+        <div class="person">
+          <img src="https://avatar.iran.liara.run/public/28" alt="" />
           <h3>Senthil</h3>
           <p>Founder</p>
         </div>
@@ -73,18 +87,18 @@
     </section>
 
     <!--  Contact -->
-    <section>
-      <h2>Contact us Today for better tomorrow!</h2>
-      <form action="">
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact us Today for better tomorrow!</h2>
+      <form class="contact-form" action="">
         <input type="text" placeholder="Full Name" required />
         <input type="email" placeholder="Email" required />
         <textarea placeholder="Describe your requirements" rows="8"></textarea>
-        <button>Send</button>
+        <button class="btn">Send</button>
       </form>
     </section>
 
     <!--  Footer -->
-    <footer>
+    <footer class="footer">
       <p>© 2025 My business - All right reserved</p>
     </footer>
   </body>
