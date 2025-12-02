@@ -74,3 +74,11 @@ console.log("ha".repeat(4));
 
 //oneline solution to reverse the string in javascript
 console.log("this is slice method".split("").reverse().join(""));
+
+//string Store data by values not by reference
+let orgstring = "myname";
+let refstring = orgstring;
+
+orgstring = "somename";
+
+console.log(refstring);
