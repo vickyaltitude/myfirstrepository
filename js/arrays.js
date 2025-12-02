@@ -28,6 +28,15 @@ console.log(myArray2.length);
 myArray2.splice(0, 3, "100", "banana");
 console.log(myArray2);
 
+//slice
+let myArray3 = [1, 34, 5, "abc", "apple", "orange", true];
+console.log(myArray3.slice(3, 6));
+
+//concat
+let arrayA = [1, 2, 3];
+let arrayB = [4, 5, 6];
+console.log(arrayA.concat(arrayB));
+
 //sort
 let myNum = [12, 0, 5, -2, 98, 65, 78];
 console.log(myNum.sort((a, b) => a - b));
