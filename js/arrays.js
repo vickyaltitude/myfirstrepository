@@ -40,3 +40,5 @@ console.log(arrayA.concat(arrayB));
 //sort
 let myNum = [12, 0, 5, -2, 98, 65, 78];
 console.log(myNum.sort((a, b) => a - b));
+
+//Higher order function method in array is pending
