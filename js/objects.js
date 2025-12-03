@@ -35,8 +35,8 @@ console.log(myObj.address["place"]);
  */
 let myObjFunc2 = {
   myName: "vignesh",
-  greet() {
-    return this;
+  greet(abc) {
+    return abc;
   },
 };
 
@@ -47,7 +47,7 @@ let myObjFunc3 = {
   },
 };
 
-console.log(myObjFunc3.greet());
+console.log(myObjFunc2.greet("santhosh"));
 
 console.log(Object.keys(myObj));
 console.log(Object.values(myObj));
