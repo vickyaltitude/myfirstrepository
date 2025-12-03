@@ -6,6 +6,10 @@ class Student {
     this.place = place;
     this.address = address;
   }
+
+  greet() {
+    return `Hello ${this.name}, from ${this.place},${this.address} welcome to our academy`;
+  }
 }
 
 let student1 = new Student("senthil", 25, "india", "chennai");
