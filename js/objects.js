@@ -25,3 +25,40 @@ delete myObj.userAge;
 console.log(myObj);
 
 console.log(myObj.address["place"]);
+
+/* let myObjFunc1 = {
+  myName: "vignesh",
+  greet: function () {
+    console.log("hello ", this);
+  },
+};
+ */
+let myObjFunc2 = {
+  myName: "vignesh",
+  greet() {
+    return this;
+  },
+};
+
+let myObjFunc3 = {
+  myName: "vignesh",
+  greet: () => {
+    return this;
+  },
+};
+
+console.log(myObjFunc3.greet());
+
+console.log(Object.keys(myObj));
+console.log(Object.values(myObj));
+console.log(Object.entries(myObj));
+
+//Object.freeze() & Object.seal()
+
+//Object.freeze(myObj);
+//Object.freeze() -  This method will freeze the object meaning we cannot add, edit or delete any of its elements.
+//Object.seal() - This method will seal the object meaning we can edit but cannot add or delete its elements.
+Object.seal(myObj);
+delete myObj.place;
+
+console.log(myObj);
