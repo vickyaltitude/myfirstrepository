@@ -24,6 +24,7 @@ let student1 = new Student("senthil", 25, "india", "chennai");
 let student2 = new Student("karthik", 26, "india", "pondy");
 let student3 = new Student("deepa", 28, "india", "cbe");
 let student4 = new Student("siva", 22, "india", "banglore");
+
 //console.log(Student.schoolName);
 //console.log(student1.tellAge());
 /* console.log(student2);
@@ -46,6 +47,13 @@ class CanadaBank {
     this.initialAmount = initialAmount;
     this.place = place;
   }
+
+  #validateBalance(amount) {
+    if (amount > this.initialAmount) {
+      return true;
+    }
+  }
+
   checkBalance() {
     return `Hello ${this.name}, happy day!  Your account balance is ${this.initialAmount}`;
   }
@@ -54,6 +62,10 @@ class CanadaBank {
     return `Hey ${this.name}, your money successfully deposited and the new balance is ${this.initialAmount}`;
   }
   withdrawMoney(withdrawAmount) {
+    if (this.#validateBalance(withdrawAmount)) {
+      return "Sorry, you cannot withdraw amount more than your account balance!";
+    }
+
     this.initialAmount = this.initialAmount - withdrawAmount;
     return `Hey ${this.name}, money debited successfully and your new balance is ${this.initialAmount}`;
   }
@@ -64,7 +76,39 @@ let person2 = new CanadaBank("akbar", 24546734, 3000, "cbe");
 let person3 = new CanadaBank("divya", 87654321, 5000, "madurai");
 console.log(person1.moneyDeposit(5000));
 console.log(person1.checkBalance());
-console.log(person1.withdrawMoney(1000));
+console.log(person1.withdrawMoney(7000));
 console.log(person1.checkBalance());
 //console.log(person2.checkBalance());
 //console.log(person3.checkBalance());
+
+//OOPs - Object Oriented Programming - 1. Abstraction 2. Encapsulation 3. Inheritance 4. Polymorphism
+
+//Abstraction - Hiding complex logic, expose only what needed
+//Encapsulation - Bundling the data and its logic together as what we are doing while creating an object using class
+//Inheritance - We can create new class and extend already existing class
+//Polymorphism - The behaviour of creating many classes using single parent class and adapting parent's method is called polymorphism.
+//Polymorphism in javascript only supports methodoverride
+
+class Animal {
+  speak() {
+    return "All animal speaks their own language";
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    return "Dogs usually barks";
+  }
+}
+
+class Cat extends Animal {
+  speak() {
+    return "Cats usually meows";
+  }
+}
+let animal1 = new Animal();
+let dog1 = new Dog();
+let cat1 = new Cat();
+console.log(dog1.speak());
+console.log(cat1.speak());
+console.log(animal1.speak());
