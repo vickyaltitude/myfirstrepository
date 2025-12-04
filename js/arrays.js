@@ -42,3 +42,11 @@ let myNum = [12, 0, 5, -2, 98, 65, 78];
 console.log(myNum.sort((a, b) => a - b));
 
 //Higher order function method in array is pending
+
+//map
+let mapExample = [1, 2, 3, 4, 5];
+
+let mutlipliedBy10 = mapExample.map((a) => {
+  return a * 10;
+});
+console.log(mutlipliedBy10);
