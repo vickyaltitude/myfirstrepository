@@ -5,6 +5,12 @@ let check = 18;
 
 if (check >= 20) {
   console.log("yes true");
+  if (true) {
+    if (true) {
+    } else {
+    }
+  } else {
+  }
 } else if (check >= 10) {
   console.log("yes true it is");
 } else if (check >= 10) {
