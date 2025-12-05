@@ -68,4 +68,7 @@ function restExample(...a) {
 }
 console.log(restExample(10, 20, 30, 40, 100));
 
+//Functions in javascript called as first class citizen
+//We can pass function as an argument and also we can return function itself from antoher function.  For these reasons we call function as a first class citizen
+
 //Closures
