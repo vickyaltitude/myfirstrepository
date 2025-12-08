@@ -70,5 +70,31 @@ console.log(restExample(10, 20, 30, 40, 100));
 
 //Functions in javascript called as first class citizen
 //We can pass function as an argument and also we can return function itself from antoher function.  For these reasons we call function as a first class citizen
+if (true) {
+  var y = 100;
+}
+console.log(y);
 
-//Closures
+function Function() {
+  var x = 10;
+
+  return x;
+}
+//console.log(x);
+let ans = Function();
+//console.log(outerFunction());
+
+//Closures - lexical scope
+
+function outer() {
+  let count = 0;
+  return function inner() {
+    count = count + 1;
+    return count;
+  };
+}
+
+let closureOutput = outer();
+console.log(closureOutput());
+console.log(closureOutput());
+console.log(closureOutput());
