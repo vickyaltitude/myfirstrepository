@@ -86,3 +86,12 @@ for (let i = 0; i < liElements.length; i++) {
 }
 
 //style by selecting nth child;
+console.log(liElements[0]);
+
+console.log(newElement.children[0]);
+
+console.log(btn.nextElementSibling);
+console.log(btn.previousElementSibling);
+console.log(btn.parentElement);
+console.log(newElement.childNodes);
+console.log(newElement.children);
