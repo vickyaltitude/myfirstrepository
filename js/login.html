@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoginForm</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        font-size: 2rem;
+      }
+
+      #container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+        height: 300px;
+        border: 2px solid black;
+        border-radius: 10px;
+        text-align: left;
+      }
+      input {
+        font-size: 1.5rem;
+        padding: 5px;
+      }
+      button {
+        font-size: 1rem;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h2 id="header">Login Form</h2>
+      <form id="form" action="">
+        <p>
+          <label for="email">Email:</label>
+          <input placeholder="example@yourmail.com" id="email" type="text" />
+        </p>
+        <p>
+          <label for="password">Password:</label>
+          <input id="password" type="password" />
+        </p>
+
+        <button id="btn" type="submit">Login</button>
+      </form>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
