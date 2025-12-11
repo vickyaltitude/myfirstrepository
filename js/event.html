@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event bubbling and trickling</title>
+    <style>
+      div {
+        min-height: 150px;
+        min-width: 150px;
+        border: 2px solid black;
+        padding: 20px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Event bubbling</h1>
+    <!--  div#grand-parent>div#parent>div#child -->
+    <div id="grand-parent">
+      grand parent
+      <div id="parent">
+        parent
+        <div id="child">Child</div>
+      </div>
+    </div>
+    <script src="event.js"></script>
+  </body>
+</html>
