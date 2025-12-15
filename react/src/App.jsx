@@ -1,16 +1,16 @@
-import { useState } from "react";
+import Welcome from "./components/Welcome";
+import Regards from "./components/Regards";
 
 function App() {
-  const [count, setCount] = useState("vicky");
-  let name = { name: "vignesh", anotherName: "kumar" };
-
   //JSX - Javascript + XML
 
   //Hooks - special functions prvided by React
+  let fruit = "apple";
   return (
-    <div>
-      <h1>Hello world, {name.anotherName}</h1>
-    </div>
+    <>
+      <h1>Hello world, This is react js course. {fruit}</h1>
+      <Welcome />
+    </>
   );
 }
 
