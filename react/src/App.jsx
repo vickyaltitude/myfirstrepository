@@ -4,6 +4,7 @@ import ReactHooks from "./components/ReactHooks";
 import UseStateHook from "./components/UseStateHook";
 import UseEffectHook from "./components/UseEffectHook";
 import { useState } from "react";
+import ControlledComponents from "./components/ControlledComponents";
 
 function App() {
   //JSX - Javascript + XML
@@ -21,6 +22,7 @@ function App() {
         Render component
       </button>
       {showComponent && <UseEffectHook />}
+      <ControlledComponents />
     </>
   );
 }
