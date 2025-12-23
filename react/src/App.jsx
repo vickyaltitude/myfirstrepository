@@ -5,6 +5,7 @@ import UseStateHook from "./components/UseStateHook";
 import UseEffectHook from "./components/UseEffectHook";
 import { useState } from "react";
 import ControlledComponents from "./components/ControlledComponents";
+import Conditionalrendering from "./components/Conditionalrendering";
 
 function App() {
   //JSX - Javascript + XML
@@ -18,11 +19,12 @@ function App() {
       {/*  <Welcome />
       <ReactHooks /> */}
       {/* <UseStateHook /> */}
-      <button onClick={() => setShowComponent(!showComponent)}>
+      {/*    <button onClick={() => setShowComponent(!showComponent)}>
         Render component
       </button>
       {showComponent && <UseEffectHook />}
-      <ControlledComponents />
+      <ControlledComponents /> */}
+      <Conditionalrendering />
     </>
   );
 }
