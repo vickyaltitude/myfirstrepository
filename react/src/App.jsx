@@ -6,6 +6,7 @@ import UseEffectHook from "./components/UseEffectHook";
 import { useState } from "react";
 import ControlledComponents from "./components/ControlledComponents";
 import Conditionalrendering from "./components/Conditionalrendering";
+import UseMemo from "./components/UseMemo";
 
 function App() {
   //JSX - Javascript + XML
@@ -24,7 +25,8 @@ function App() {
       </button>
       {showComponent && <UseEffectHook />}
       <ControlledComponents /> */}
-      <Conditionalrendering />
+      {/* <Conditionalrendering /> */}
+      <UseMemo />
     </>
   );
 }
