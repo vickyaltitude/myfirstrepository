@@ -5,7 +5,7 @@ function ReactHooks() {
     "useRef",
     "useMemo",
     "useCallback",
-    "useNavigation",
+    "useNavigate",
     "useContext",
     "useReducer",
   ];
