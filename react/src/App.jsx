@@ -7,6 +7,7 @@ import { useState } from "react";
 import ControlledComponents from "./components/ControlledComponents";
 import Conditionalrendering from "./components/Conditionalrendering";
 import UseMemo from "./components/UseMemo";
+import UseCallback from "./components/UseCallback";
 
 function App() {
   //JSX - Javascript + XML
@@ -27,6 +28,7 @@ function App() {
       <ControlledComponents /> */}
       {/* <Conditionalrendering /> */}
       <UseMemo />
+      <UseCallback />
     </>
   );
 }
