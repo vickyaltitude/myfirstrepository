@@ -29,6 +29,7 @@ function ParticularDetails() {
     },
   ]);
   let { productName } = useParams();
+  console.log(productName);
   let filteredProduct = dummyProduct.filter((product) => {
     return product.productName === productName;
   });
