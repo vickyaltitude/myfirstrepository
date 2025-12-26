@@ -14,6 +14,7 @@ import Products from "./components/websites/Products";
 import AboutUs from "./components/websites/AboutUs";
 import Contact from "./components/websites/Contact";
 import Navigation from "./components/websites/Navigation";
+import ProductDetails from "./components/websites/ProductDetails";
 
 function App() {
   //JSX - Javascript + XML
@@ -39,7 +40,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/products" element={<Products />}>
+          <Route path="details" element={<ProductDetails />} />
+        </Route>
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
