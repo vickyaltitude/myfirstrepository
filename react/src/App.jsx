@@ -43,7 +43,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />}>
-          <Route path="details" element={<ProductDetails />} />
+          <Route
+            path="details"
+            element={<ProductDetails showComponent={showComponent} />}
+          />
           <Route path="details/:productName" element={<ParticularDetails />} />
         </Route>
         <Route path="/aboutus" element={<AboutUs />} />

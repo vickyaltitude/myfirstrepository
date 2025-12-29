@@ -1,5 +1,6 @@
-import React, { useReducer, useRef, useState } from "react";
+import React, { useContext, useReducer, useRef, useState } from "react";
 import { reducerFunction } from "./reducerFile";
+import { context } from "../../store/ContextProvider";
 
 function UseReducer() {
   const [state, dispatch] = useReducer(reducerFunction, {
@@ -11,6 +12,8 @@ function UseReducer() {
   let [isLoggedIn, setIsLoggedIn] = useState(false);
   let [todos, setTodos] = useState(); */
   let ref = useRef();
+  let data = useContext(context);
+  console.log(data);
 
   function handleLogin() {
     dispatch({ type: "login" });
@@ -35,16 +38,16 @@ function UseReducer() {
     <div>
       <h1>Use reducer</h1>
       <ol>
-        {state.todos.map((element, index) => {
+        {data.todos.map((element, index) => {
           return <li key={index}>{element.todo}</li>;
         })}
       </ol>
       <input type="text" ref={ref} />
       <button onClick={handleAddTodo}>Add todo</button>
-      <h3>count = {state.count}</h3>
-      <button onClick={increaseCount}>Increase 1</button>
-      <h3>{state.isLoggedIn ? "welcome user 1" : "please login"}</h3>
-      <button onClick={handleLogin}>Login</button>
+      <h3>count = {data.count}</h3>
+      <button onClick={() => data.setCount(data.count + 1)}>Increase 1</button>
+      <h3>{data.isLoggedIn ? "welcome user 1" : "please login"}</h3>
+      <button onClick={() => data.setIsLoggedIn(true)}>Login</button>
     </div>
   );
 }
