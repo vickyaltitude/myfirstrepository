@@ -10,6 +10,7 @@ function Navigation() {
       <Link to={"/products"}>Products</Link>
       <Link to={"/contact"}>Contact us</Link>
       <Link to={"/aboutus"}>About us</Link>
+      <Link to={"/reducer"}>Reducer</Link>
     </div>
   );
 }
