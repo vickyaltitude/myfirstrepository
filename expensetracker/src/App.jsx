@@ -1,13 +1,14 @@
 import { useState } from "react";
 import ExpenseForm from "./components/ExpenseForm";
 import ExpenseList from "./components/ExpenseList";
+import style from "./Index.module.css";
 
 function App() {
   const [expenses, setExpenses] = useState([]);
   const [editExpense, setEditExpense] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   return (
-    <div>
+    <div className={style.main}>
       <h2>Expense Tracker</h2>
       <ExpenseForm
         setExpenses={setExpenses}

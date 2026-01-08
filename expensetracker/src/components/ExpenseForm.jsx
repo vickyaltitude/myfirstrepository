@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Expenseform.module.css";
+import style from "./Expenseform.module.css";
 
 function ExpenseForm({
   expenses,
@@ -44,8 +44,7 @@ function ExpenseForm({
   }, [isEditing, editExpense]);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className={styles.fontcolor}>Inner element</div>
+    <form onSubmit={handleSubmit} className={style.form}>
       <input
         type="text"
         placeholder="Expense title"

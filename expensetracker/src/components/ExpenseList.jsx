@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./Expenselist.module.css";
 
 function ExpenseList({
   expenses,
@@ -20,7 +21,7 @@ function ExpenseList({
     setExpenses(filteredNewExpense);
   }
   return (
-    <div>
+    <div className={style.listmain}>
       <ul>
         {expenses.map((element) => {
           return (
