@@ -8,10 +8,10 @@ function ExpenseList({
   setIsEditing,
 }) {
   function editExpense(id) {
+    setIsEditing(true);
     let filter = expenses.filter((ele) => ele.id.toString() === id.toString());
     console.log(filter);
     setEditExpense(filter);
-    setIsEditing(true);
   }
   function deleteExpense(id) {
     let filteredNewExpense = expenses.filter(
