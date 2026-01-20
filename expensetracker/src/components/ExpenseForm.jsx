@@ -10,15 +10,30 @@ function ExpenseForm({
 }) {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState(0);
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log("handlesubmit executed", title, amount);
+    console.log("handlesubmit executed", title, amount, editExpense);
 
     if (editExpense && editExpense.length > 0) {
+      console.log("Editing expense with id:", editExpense, expenses);
       let updatedExpenses = expenses.map((ele) =>
         ele.id === editExpense[0].id
           ? { ...ele, expenseTitle: title, expenseAmount: amount }
-          : ele
+          : ele,
+      );
+
+      let editExpense = await fetch(
+        `http://localhost:3000/editexpense/${editExpense[0].id}`,
+        {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            expenseTitle: title,
+            expenseAmount: amount,
+          }),
+        },
       );
       setExpenses(updatedExpenses);
       setTitle("");
@@ -30,6 +45,19 @@ function ExpenseForm({
       ...expenses,
       { id: expenses.length + 1, expenseTitle: title, expenseAmount: amount },
     ];
+
+    let addNewExpense = await fetch("http://localhost:3000/addexpense", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        id: expenses.length + 1,
+        expenseTitle: title,
+        expenseAmount: amount,
+      }),
+    });
+    console.log(addNewExpense);
     setExpenses(newExpenses);
     setTitle("");
     setAmount(0);

@@ -10,9 +10,10 @@ function App() {
 
   useEffect(() => {
     (async function fetchData() {
-      let response = await fetch("http://localhost:3000/users");
+      let response = await fetch("http://localhost:3000/expense");
       let data = await response.json();
       console.log("Fetched data:", data);
+      setExpenses(data);
     })();
   }, []);
   return (

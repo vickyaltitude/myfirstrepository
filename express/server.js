@@ -26,14 +26,46 @@ app.get("/home", (req, res) => {
   res.json({ message: "Hello, World!" });
 });
 
-app.get("/users", async (req, res) => {
+app.get("/expense", async (req, res) => {
   try {
-    const usersData = await db.collection("users").find().toArray();
-    console.log(usersData);
-    res.status(200).json(usersData);
+    const expenseData = await db.collection("expensetracker").find().toArray();
+    console.log(expenseData);
+    res.status(200).json(expenseData);
   } catch (err) {
     console.log(err);
     res.status(500).json({ error: "Failed to fetch users" });
+  }
+});
+
+app.post("/addexpense", async (req, res) => {
+  try {
+    const requestData = req.body;
+    let storeData = await db
+      .collection("expensetracker")
+      .insertOne(requestData);
+    console.log(storeData);
+    res.status(200).json({ message: "Expense added successfully" });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: "Failed to add expense" });
+  }
+});
+
+app.put("/editexpense/:targetid", async (req, res) => {
+  try {
+    const targetId = parseInt(req.params.targetid);
+    const { expenseTitle, expenseAmount } = req.body;
+    let editData = await db
+      .collection("expensetracker")
+      .updateOne(
+        { id: targetId },
+        { $set: { title: expenseTitle, amount: expenseAmount } },
+      );
+    console.log(editData);
+    res.status(200).json({ message: "Expense edited successfully" });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: "Failed to edit expense" });
   }
 });
 
