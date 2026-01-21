@@ -44,7 +44,7 @@ app.post("/addexpense", async (req, res) => {
       .collection("expensetracker")
       .insertOne(requestData);
     console.log(storeData);
-    res.status(200).json({ message: "Expense added successfully" });
+    res.status(201).json({ message: "Expense added successfully" });
   } catch (err) {
     console.log(err);
     res.status(500).json({ error: "Failed to add expense" });
@@ -59,7 +59,7 @@ app.put("/editexpense/:targetid", async (req, res) => {
       .collection("expensetracker")
       .updateOne(
         { id: targetId },
-        { $set: { title: expenseTitle, amount: expenseAmount } },
+        { $set: { expenseTitle: expenseTitle, expenseAmount: expenseAmount } },
       );
     console.log(editData);
     res.status(200).json({ message: "Expense edited successfully" });
@@ -69,6 +69,18 @@ app.put("/editexpense/:targetid", async (req, res) => {
   }
 });
 
+app.delete("/deleteexpense/:targetid", async (req, res) => {
+  try {
+    const targetId = parseInt(req.params.targetid);
+    let deleteData = await db
+      .collection("expensetracker")
+      .deleteOne({ id: targetId });
+    res.status(200).json({ message: "Expense deleted successfully" });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: "Failed to delete expense" });
+  }
+});
 app.listen(3000, () => {
   connectDB();
   console.log("Server is running on port 3000");

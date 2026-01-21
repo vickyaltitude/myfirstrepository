@@ -22,7 +22,7 @@ function ExpenseForm({
           : ele,
       );
 
-      let editExpense = await fetch(
+      let editExpenseResponse = await fetch(
         `http://localhost:3000/editexpense/${editExpense[0].id}`,
         {
           method: "PUT",

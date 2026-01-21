@@ -14,10 +14,19 @@ function ExpenseList({
     console.log(filter);
     setEditExpense(filter);
   }
-  function deleteExpense(id) {
+  async function deleteExpense(id) {
     let filteredNewExpense = expenses.filter(
-      (ele) => ele.id.toString() !== id.toString()
+      (ele) => ele.id.toString() !== id.toString(),
     );
+
+    let deleteExpenseResponse = await fetch(
+      `http://localhost:3000/deleteexpense/${id}`,
+      {
+        method: "DELETE",
+      },
+    );
+    console.log(deleteExpenseResponse);
+
     setExpenses(filteredNewExpense);
   }
   return (
