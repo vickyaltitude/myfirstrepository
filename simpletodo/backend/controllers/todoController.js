@@ -31,6 +31,7 @@ exports.updateTodo = async (req, res) => {
   try {
     const { id } = req.params;
     const { title, completed } = req.body;
+    console.log(req.body, id);
     const updateTodo = await Todo.findOneAndUpdate(
       { id: id },
       { title, completed },
